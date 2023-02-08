@@ -716,19 +716,19 @@
 % Define an environment for cvprojects
 \newenvironment{cvprojects}{%
   \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
+  \vspace{-2mm}
   \begin{center}
-    \setlength\tabcolsep{1ex}
+    \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{\textwidth - 4.0cm} R{2.5cm}}
 }{%
     \end{tabular*}
   \end{center}
 }
-% Define a line of cv information(skill)
-% Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\cvprojects}[2]{%
-	\projectstypestyle{#1} & \projectssetstyle{#2} \\
+% Define a line of cv information(honor, award or something else)
+% Usage: \cvprojects{<position>}{<title>}{<location>}{<date>}
+\newcommand*{\cvprojects}[4]{%
+  \projectsdatestyle{#4} & \projectspositionstyle{#1}, \projectstitlestyle{#2} & \projectslocationstyle{#3} \\
 }
 
 % Define an environment for cvitems(for cventry)
