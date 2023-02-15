@@ -20,3 +20,9 @@ jobs:
       with:
         name: examples
         path: examples/*.pdf
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+    - run: npm install onedrive-api  
