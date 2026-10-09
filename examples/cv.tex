@@ -41,6 +41,11 @@
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
+% Do not hyphenate words at line breaks, so text extraction (ATS) keeps keywords whole
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
@@ -96,16 +101,16 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/summary.tex}
-\input{cv/education.tex}
 \input{cv/skills.tex}
 \input{cv/experience.tex}
 \input{cv/previous.tex}
+\input{cv/education.tex}
 %\input{cv/extracurricular.tex}
 %\input{cv/honors.tex}
 \input{cv/certificates.tex}
-\input{cv/presentation.tex}
-%\input{cv/writing.tex}
 \input{cv/committees.tex}
+%\input{cv/presentation.tex}
+%\input{cv/writing.tex}
 
 
 
