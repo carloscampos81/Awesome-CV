@@ -41,6 +41,11 @@
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
 
+% Do not hyphenate words at line breaks, so text extraction (ATS) keeps keywords whole
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
@@ -52,8 +57,8 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo{./examples/profile.png}
 \name{Carlos Antonio }{Campos Silva}
-\position{Senior Site Reliability Engineer{\enskip\cdotp\enskip}Cloud \& DevOps}
-\address{Rua Secundino Domingues n° 334 apto: 131 – Jd. Independência – CEP: 03223-110 - São Paulo}
+\position{Senior Cloud Engineer{\enskip\cdotp\enskip}Senior DevOps Engineer}
+\address{São Paulo}
 
 \mobile{(11) 99806-0487}
 \email{carlos.campos81@hotmail.com}
@@ -86,7 +91,7 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
+  {}
   {Carlos Antonio C. Silva~~~·~~~Curriculum Vitae}
   {\thepage}
 
@@ -95,15 +100,17 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
+\input{cv/summary.tex}
 \input{cv/skills.tex}
 \input{cv/experience.tex}
+\input{cv/previous.tex}
+\input{cv/education.tex}
 %\input{cv/extracurricular.tex}
 %\input{cv/honors.tex}
 \input{cv/certificates.tex}
-\input{cv/presentation.tex}
-%\input{cv/writing.tex}
 \input{cv/committees.tex}
+%\input{cv/presentation.tex}
+%\input{cv/writing.tex}
 
 
 

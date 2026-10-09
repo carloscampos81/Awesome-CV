@@ -1,0 +1,45 @@
+% Keep the whole section together: a minipage cannot be split, so if it does not fit it moves entirely to the next page.
+% The \par after it ends the line holding the box, so the next section gets its normal top spacing.
+\par\noindent\begin{minipage}{\textwidth}
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Previous Professional Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvparagraph}
+
+Worked in IT infrastructure and operations since 2008: Windows and Linux servers, virtualization (VMware and Hyper-V), networking, backup and monitoring, evolving into DevOps with CI/CD, Puppet, Terraform on OpenStack and Splunk.
+
+\end{cvparagraph}
+
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Roles and companies} % Role
+    {Before 2021} % Title
+    {São Paulo} % Location
+    {Mar. 2008 - Jun. 2021} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {\textbf{TOTVS}: DevOps Engineer (Nov. 2020 - Jun. 2021)}
+        \item {\textbf{NTT DATA Europe \& Latam}: DevOps Engineer (Jul. 2019 - Nov. 2020)}
+        \item {\textbf{UnitedHealth Group}: DevOps IT Infrastructure Analyst (Dec. 2017 - Jul. 2019)}
+        \item {\textbf{CDF}: Senior Infrastructure Analyst (Jul. 2017 - Dec. 2017)}
+        \item {\textbf{Prime IT Services}: Senior Infrastructure Analyst (Oct. 2013 - Jul. 2017) and Mid-level Support Analyst (Sep. 2012 - Oct. 2013)}
+        \item {\textbf{Secretaria do Verde e Meio Ambiente (São Paulo)}: Systems Support Analyst (Mar. 2009 - Aug. 2012)}
+        \item {\textbf{Procon-SP}: Systems Development Trainee (Mar. 2008 - Mar. 2009)}
+      \end{cvitems}
+    }
+  \break
+
+%---------------------------------------------------------
+\end{cventries}
+\end{minipage}\par
+
+% Blank line before the next section
+\vspace{\baselineskip}
