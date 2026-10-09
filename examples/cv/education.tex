@@ -6,48 +6,42 @@
 %-------------------------------------------------------------------------------
 %	CONTENT
 %-------------------------------------------------------------------------------
+% Compact entry (no description): same look as \cventry, without the bullet row
+% Usage: \cventrycompact{<degree>}{<institution>}{<location>}{<date>}
+\newcommand*{\cventrycompact}[4]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+    \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+  \end{tabular*}%
+}
+
 \begin{cventries}
 
 %---------------------------------------------------------
-  \cventry
+  \cventrycompact
     {MBA em Inteligência Artificial e Machine Learning} % Degree
     {Universidade Anhanguera (Polo Anhanguera São Paulo)} % Institution
     {São Paulo, Brasil} % Location
     {Jan. 2024 - Dez. 2024} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Foco em aprendizado de máquina, redes neurais e processamento de linguagem natural.}
-        \item {Projetos práticos em Python com TensorFlow e Scikit-learn.}
-      \end{cvitems}
-    }
   \break
 
 %---------------------------------------------------------
-  \cventry
+  \cventrycompact
     {MBA em Arquitetura e Gestão de Infraestrutura de TI} % Degree
     {FIAP (Faculdade de Informática e Administração Paulista)} % Institution
     {São Paulo, Brasil} % Location
     {Jan. 2016 - Mai. 2017} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Gestão de infraestrutura de TI em ambientes híbridos e cloud computing.}
-        \item {Metodologias ágeis e governança de TI (ITIL e COBIT).}
-      \end{cvitems}
-    }
   \break
 
 %---------------------------------------------------------
-  \cventry
+  \cventrycompact
     {Bacharelado em Sistemas de Informação} % Degree
     {UNIBAN/SP (Universidade Bandeirantes de São Paulo)} % Institution
     {São Paulo, Brasil} % Location
     {Jan. 2008 - Dez. 2011} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Desenvolvimento de software, banco de dados e redes de computadores.}
-        \item {Projetos acadêmicos voltados para automação de processos empresariais.}
-      \end{cvitems}
-    }
   \break
 %---------------------------------------------------------
 \end{cventries}
